@@ -11,6 +11,4 @@ knn = KNeighborsClassifier(n_neighbors=1)
 knn.fit(X_train, y_train)
 KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski', metric_params=None, n_jobs=1, n_neighbors=1, p=2, weights='uniform')
 
-X_new = np.array([[5, 2.9, 1, 0.2]])
-prediction = knn.predict(X_new)
-print(prediction)
+print(knn.score(X_test, y_test))
